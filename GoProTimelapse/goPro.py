@@ -20,7 +20,7 @@ class GoPro:
         try:
             #Opcion 0 para Connexion perdida
             #Opcion 1 para foto no guardada
-            config = xml1.parse('Config.xml').getroot()
+            config = xml1.parse('/home/pi/Desktop/goProPython/Config.xml').getroot()
             user = ""
             pwd = ""
             if (len(config.findall("frommail")) > 0):
@@ -48,7 +48,6 @@ class GoPro:
             server.quit()
         except Exception,e:
             print(e)
-            server.quit()
             pass
     @staticmethod
     def GetDir(option = 0):
@@ -78,7 +77,7 @@ class GoPro:
                 except Exception,e:
                    print e
                    pass
-                   
+                   #EnviarMail(1)
           if (option == 1):
              while True:
                 Inp = raw_input()
@@ -159,7 +158,7 @@ class GoPro:
         while(True):
             try:
                 print("ENTRA")
-                config = xml1.parse('Config.xml').getroot()
+                config = xml1.parse('/home/pi/Desktop/goProPython/Config.xml').getroot()
                 wifiPwd = ""
                 if (config.findall("wifipwd") != []):
                     wifiPwd = config.findall("wifipwd")[0].text
