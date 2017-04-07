@@ -10,15 +10,24 @@ After that we have to connect the charger to our components and finnaly we only 
 ## Xml Config Format
 
 Our program will send a email advising us when the GoPro is not saving the images correctly.
-<goPro>
-<destmail>Destination mail/s to recive when Process fails</destmail>
-<frommail>The user mail that will send mails when Process fails</frommail>
-<mailpwd>User mail password</mailpwd>
-<wifipwd>The GoPro wireless password</wifipwd>
-</goPro>
+
+'<goPro>'
+
+'<destmail>Destination mails to recive when Process fails</destmail>''
+
+'<frommail>The user mail that will send mails when Process fails</frommail>'
+
+'<mailpwd>User mail password</mailpwd>'
+
+'<wifipwd>The GoPro wireless password</wifipwd>'
+
+'</goPro>'
+
+Remember: Remove de ' in our xml file.
 
 Our program runs the main class goPro.py that by default makes a photo every 30 minutes. We can change this interval modifing time.sleep() command on the end of Start() function.
 If we have not connection whith the GoPro or the imgage is not correctly saved our program execute EnviarMail() function that sends a Information mail to us.
+
 We also need tho check if the GoPro IP is correct in the start() function. In my case this IP is 10.5.5.9 but maybe in your application this address is diferent.
 
 ## Downloading imges
