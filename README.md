@@ -9,7 +9,7 @@ After that we have to connect the charger to our components and finnaly we only 
 
 ## Xml Config Format
 
-Our program will send a email advising us when the GoPro is not saving the images correctly.
+Our program will send a email advising us when the GoPro is not saving the images correctly. The format of the xml file that contain the mail config and paswords is like the following:
 ```
 <goPro>
 
@@ -22,7 +22,7 @@ Our program will send a email advising us when the GoPro is not saving the image
 <wifipwd>The GoPro wireless password</wifipwd>
 
 </goPro>
-´´´
+```
 
 
 Our program runs the main class goPro.py that by default makes a photo every 30 minutes. We can change this interval modifing time.sleep() command on the end of Start() function.
